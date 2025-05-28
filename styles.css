@@ -1,27 +1,142 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 20px auto;
+/* Reset and base */
+* {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 30px auto;
+  background: #1e1e2f;
+  color: #e0e0e0;
+  padding: 0 20px;
+  transition: background-color 0.5s ease;
+}
+
+h1, h2, h3 {
+  color: #ffcc00;
+  text-shadow: 0 0 5px #ffcc00aa;
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+  background: #ffcc00;
+  border: none;
+  padding: 10px 18px;
+  margin: 10px 5px 10px 0;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #1e1e2f;
+  box-shadow: 0 4px 8px #ffcc00aa;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px #ffcc00cc;
+}
+
+input[type="text"], input[type="number"], select {
+  padding: 8px 12px;
+  margin: 6px 10px 12px 0;
+  border-radius: 6px;
+  border: 1.5px solid #ffcc00;
+  background: #2c2c44;
+  color: #f0f0f0;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+  outline: none;
+  border-color: #ffaa00;
+  box-shadow: 0 0 8px #ffaa00bb;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 15px;
+  box-shadow: 0 0 15px #00000088;
+  background: #2c2c44;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease;
 }
+
 th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
+  padding: 14px 20px;
   text-align: center;
+  color: #fff;
 }
-input, button, select {
-  padding: 6px;
-  margin: 4px 0;
+
+th {
+  background: #ffcc00;
+  color: #1e1e2f;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  user-select: none;
 }
+
+tr:nth-child(even) {
+  background-color: #383856;
+}
+
+tr:hover {
+  background-color: #4a4a7a;
+  transition: background-color 0.3s ease;
+}
+
 .wallet {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-top: 20px;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 25px;
+  background: #2c2c44;
+  box-shadow: 0 0 20px #ffcc0055;
+  animation: slideUp 0.6s ease;
 }
+
 .wallet h3 {
   margin-top: 0;
+  color: #ffcc00;
+  user-select: none;
 }
+
+.cryptoSelect, .cryptoAmount {
+  width: 160px;
+  max-width: 45%;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar for tables if needed */
+tbody {
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+

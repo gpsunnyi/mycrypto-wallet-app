@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+input, button, select {
+  padding: 6px;
+  margin: 4px 0;
+}
+.wallet {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 20px;
+}
+.wallet h3 {
+  margin-top: 0;
+}
